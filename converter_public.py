@@ -18,7 +18,6 @@ class Mesh:
 
 class OBJ:
     "OBJ File Reader"
-
     def __init__(self, filename):
         """Constructor.
         Args:
@@ -45,7 +44,6 @@ class OBJ:
                     self.meshs.faceCount.append(len(tokens))
                     for i in range(len(tokens)):
                         self.meshs.index.append(int(index[i])-1)
-
             f.close()
         except IOError:
             print("OBJ file not found.")
